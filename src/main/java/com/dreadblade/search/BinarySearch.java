@@ -16,8 +16,16 @@ package com.dreadblade.search;
  *
  * Source: https://en.wikipedia.org/wiki/Binary_search_algorithm
  */
-
 public class BinarySearch {
+
+    /**
+     * Binary search algorithm
+     * @param sortedArray already sorted <code>int[]</code> array
+     * @param key an <code>int</code> value that need to be find
+     * @param left <code>int</code> left index border of search
+     * @param right <code>int</code> right index border of search
+     * @return <code>-1</code> if key is not found otherwise the key <code>int</code> index in the sortedArray
+     */
     public static int binarySearch(int[] sortedArray, int key, int left, int right)
     {
         int middle = (left + right) / 2;

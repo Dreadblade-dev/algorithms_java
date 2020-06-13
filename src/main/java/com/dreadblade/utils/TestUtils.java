@@ -4,8 +4,8 @@ package com.dreadblade.utils;
  * @author Dreadblade- (https://github.com/Dreadblade-dev)
  * Testing utils for algorithms
  */
-
 public class TestUtils {
+
     /**
      * Generates an <code>Integer</code> array with <code>int</code> size where every value
      * is random <code>int</code> value in range between min and max

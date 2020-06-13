@@ -16,9 +16,14 @@ package com.dreadblade.search;
  *
  * Source: https://en.wikipedia.org/wiki/Linear_search
  */
-
-
 public class LinearSearch {
+
+    /**
+     * Linear search algorithm
+     * @param array <code>int[]</code> array
+     * @param key an <code>int</code> value that need to be find
+     * @return <code>-1</code> if key is not found otherwise the key <code>int</code> index in the array
+     */
     public static int linearSearch(int[] array, int key) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == key)

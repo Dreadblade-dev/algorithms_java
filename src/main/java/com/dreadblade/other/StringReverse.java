@@ -3,8 +3,13 @@ package com.dreadblade.other;
 /**
  * @author Dreadblade- (https://github.com/Dreadblade-dev)
  */
-
 public class StringReverse {
+
+    /**
+     * String reverse algorithm
+     * @param str - <code>String</code> to be reversed
+     * @return reversed <code>String</code> str
+     */
     public static String reverse(String str) {
         if (str == null || str.length() == 0)
             return str;
