@@ -18,8 +18,6 @@ package com.dreadblade.datastructures.stack;
  * │ Insertion │ Deletion │
  * │───────────┼──────────│
  * │    O(1)   │   O(1)   │
- * │───────────┼──────────│
- * │    O(1)   │   O(1)   │
  * └───────────┴──────────┘
  *
  * Source: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
