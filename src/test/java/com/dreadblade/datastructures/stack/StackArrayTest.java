@@ -42,7 +42,7 @@ public class StackArrayTest {
     }
 
     @Test
-    public void pushAndPopIsCorrect()
+    public void popIsCorrect()
     {
         StackArray<Integer> stack = new StackArray<>();
         stack.push(1);
@@ -50,19 +50,26 @@ public class StackArrayTest {
         stack.push(3);
         stack.push(4);
         stack.push(5);
-        assertEquals(5, stack.pop());
-        assertEquals(4, stack.pop());
-        assertEquals(3, stack.pop());
-        assertEquals(2, stack.pop());
-        assertEquals(1, stack.pop());
+        assertEquals(5, (int) stack.pop());
+        assertEquals(4, stack.getSize());
+        assertEquals(4, (int) stack.pop());
+        assertEquals(3, stack.getSize());
+        assertEquals(3, (int) stack.pop());
+        assertEquals(2, stack.getSize());
+        assertEquals(2, (int) stack.pop());
+        assertEquals(1, stack.getSize());
+        assertEquals(1, (int) stack.pop());
+        assertEquals(0, stack.getSize());
     }
 
     @Test
-    public void pushAndPeekIsCorrect()
+    public void peekIsCorrect()
     {
         StackArray<Integer> stack = new StackArray<>();
         stack.push(128);
-        assertEquals(128, stack.peek());
+        assertEquals(1, stack.getSize());
+        assertEquals(128, (int) stack.peek());
+        assertEquals(1, stack.getSize());
     }
 
     @Test (expected = EmptyStackException.class)

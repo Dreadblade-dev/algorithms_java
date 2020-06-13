@@ -29,7 +29,7 @@ package com.dreadblade.datastructures.stack;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 
-public class StackArray<T> implements Stack {
+public class StackArray<T> implements Stack<T> {
 
     private int capacity;
     private int size;
@@ -56,7 +56,7 @@ public class StackArray<T> implements Stack {
     }
 
     @Override
-    public void push(Object item) {
+    public void push(T item) {
         if (size + 1 == capacity)
             changeCapacity(capacity + CAPACITY_VALUE);
 
@@ -65,22 +65,22 @@ public class StackArray<T> implements Stack {
     }
 
     @Override
-    public Object pop() {
+    public T pop() {
         if (isEmpty())
             throw new EmptyStackException();
 
         if (size < capacity / 4)
             changeCapacity(capacity / 2);
         size--;
-        return data[size + 1];
+        return (T) data[size + 1];
     }
 
     @Override
-    public Object peek() {
+    public T peek() {
         if (isEmpty())
             throw new EmptyStackException();
 
-        return data[size];
+        return (T) data[size];
     }
 
     @Override
