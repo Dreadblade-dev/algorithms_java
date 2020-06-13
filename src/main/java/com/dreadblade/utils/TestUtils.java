@@ -2,7 +2,7 @@ package com.dreadblade.utils;
 
 /**
  * @author Dreadblade- (https://github.com/Dreadblade-dev)
- * Testing utils for
+ * Testing utils for algorithms
  */
 
 public class TestUtils {
