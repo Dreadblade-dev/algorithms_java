@@ -25,7 +25,6 @@ package com.dreadblade.datastructures.stack;
 
 
 import java.util.Arrays;
-import java.util.EmptyStackException;
 
 public class StackArray<T> implements Stack<T> {
 

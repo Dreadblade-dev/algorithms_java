@@ -2,8 +2,6 @@ package com.dreadblade.datastructures.stack;
 
 import org.junit.Test;
 
-import java.util.EmptyStackException;
-
 import static org.junit.Assert.*;
 
 public class StackArrayTest {
