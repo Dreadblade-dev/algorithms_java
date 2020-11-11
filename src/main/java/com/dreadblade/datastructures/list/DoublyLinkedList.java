@@ -28,7 +28,11 @@ package com.dreadblade.datastructures.list;
  */
 public class DoublyLinkedList<T> implements List<T> {
 
-    private class Node<T> {
+    /**
+     * Class representing linked record of list
+     * @param <T> type of content in record
+     */
+    private static class Node<T> {
         private T data;
         private Node<T> prev;
         private Node<T> next;
@@ -50,11 +54,17 @@ public class DoublyLinkedList<T> implements List<T> {
         tail = null;
     }
 
+    /**
+     * @return <code>int size</code> of the list
+     */
     @Override
     public int getSize() {
         return size;
     }
 
+    /**
+     * Clears the list
+     */
     @Override
     public void clear() {
         if (size != 0) {
@@ -64,11 +74,19 @@ public class DoublyLinkedList<T> implements List<T> {
         }
     }
 
+    /**
+     * @return <code>true</code> if the list is empty
+     */
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * Adds a <code>T item</code> to the list
+     * @param item a <code>T item</code> to be added to the list
+     * @return true if the <code>T item</code> was added
+     */
     @Override
     public boolean add(T item) {
         if (tail != null) {
@@ -84,6 +102,12 @@ public class DoublyLinkedList<T> implements List<T> {
         return true;
     }
 
+    /**
+     * Adds a <code>T item</code> to the list on the <code>int index</code> position
+     * @param item a <code>T item</code> to be added to the list
+     * @param index an <code>int index</code> of added <code>T item</code>
+     * @return true if the <code>T item</code> was added
+     */
     @Override
     public boolean add(T item, int index) {
         if (!isIndexCorrect(index)) {
@@ -103,8 +127,6 @@ public class DoublyLinkedList<T> implements List<T> {
             currentNode = head.next;
         }
 
-
-
         Node<T> newNode = new Node<>(item, currentNode, currentNode.next);
         currentNode.next.prev = newNode;
         currentNode.next = newNode;
@@ -112,6 +134,11 @@ public class DoublyLinkedList<T> implements List<T> {
         return true;
     }
 
+    /**
+     * Removes <code>T item</code> from the list
+     * @param item a <code>T item</code> to be removed from the list
+     * @return true if the <code>T item</code> was removed
+     */
     @Override
     public boolean remove(T item) {
         if (isEmpty()) {
@@ -139,6 +166,11 @@ public class DoublyLinkedList<T> implements List<T> {
         throw new NoSuchElementException();
     }
 
+    /**
+     * Removes an item at <code>int index</code> position from the list
+     * @param index an item with position <code>int index</code> to be removed from the list
+     * @return <code>T item</code> at position <code>int index</code> if the item with this position was removed
+     */
     @Override
     public T remove(int index) {
         if (!isIndexCorrect(index)) {
@@ -174,6 +206,10 @@ public class DoublyLinkedList<T> implements List<T> {
         throw new NoSuchElementException();
     }
 
+    /**
+     * @param index an <code>int index</code> position of a <code>T item</code>
+     * @return <code>T item</code> at the <code>int index</code> position from the list
+     */
     @Override
     public T get(int index) {
         if (!isIndexCorrect(index)) {
@@ -188,8 +224,7 @@ public class DoublyLinkedList<T> implements List<T> {
         Node<T> currentNode = head;
         while (currentNode != null) {
             if (count == index) {
-                T data = currentNode.data;
-                return data;
+                return currentNode.data;
             }
             count++;
             currentNode = currentNode.next;
@@ -197,6 +232,10 @@ public class DoublyLinkedList<T> implements List<T> {
         throw new NoSuchElementException();
     }
 
+    /**
+     * @param item at an <code>int index</code> position
+     * @return an <code>int index</code> position of the <code>T item</code>
+     */
     @Override
     public int indexOf(T item) {
         if (isEmpty()) {
@@ -215,6 +254,10 @@ public class DoublyLinkedList<T> implements List<T> {
         throw new NoSuchElementException();
     }
 
+    /**
+     * @param index an <code>int index</code> position of a <code>T item</code>
+     * @return <code>true</code> if <code>int index</code> is correct
+     */
     public boolean isIndexCorrect(int index) {
         return index >= 0;
     }
