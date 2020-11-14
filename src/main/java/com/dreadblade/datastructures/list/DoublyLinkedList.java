@@ -1,5 +1,8 @@
 package com.dreadblade.datastructures.list;
 
+import com.dreadblade.utils.IndexOutOfBoundsException;
+import com.dreadblade.utils.NoSuchElementException;
+
 /**
  * @author Dreadblade- (https://github.com/Dreadblade-dev)
  * @param <T> type of content
@@ -14,15 +17,15 @@ package com.dreadblade.datastructures.list;
  * traversal of the list.
  *
  * Time complexity:
- * ┌───────────┬───────────┬──────────┬──────────┼──────────┐
- * │           │ Insertion │ Deletion │  Access  │  Search  │
- * ├───────────┼───────────┼──────────┼──────────┼──────────┤
- * │Best case: │    O(1)   │   O(1)   │   O(1)   │   O(1)   │
- * ├───────────┼───────────┼──────────┼──────────┼──────────┤
- * │ Average:  │    O(1)   │   O(n)   │   O(1)   │   O(n)   │
- * ├───────────┼───────────┼──────────┤──────────┼──────────┤
- * │Worst case:│    O(n)   │   O(1)   │   O(1)   │   O(n)   │
- * └───────────┴───────────┴──────────┴──────────┴──────────┘
+ * ┌────────────┬───────────┬──────────┬──────────┬──────────┐
+ * │            │ Insertion │ Deletion │  Access  │  Search  │
+ * ├────────────┼───────────┼──────────┼──────────┼──────────┤
+ * │ Best case: │    O(1)   │   O(1)   │   O(1)   │   O(1)   │
+ * ├────────────┼───────────┼──────────┼──────────┼──────────┤
+ * │  Average:  │    O(1)   │   O(n)   │   O(1)   │   O(n)   │
+ * ├────────────┼───────────┼──────────┤──────────┼──────────┤
+ * │ Worst case:│    O(n)   │   O(1)   │   O(1)   │   O(n)   │
+ * └────────────┴───────────┴──────────┴──────────┴──────────┘
  *
  * Source: https://en.wikipedia.org/wiki/Doubly_linked_list
  */

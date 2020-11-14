@@ -1,4 +1,4 @@
-package com.dreadblade.datastructures.list;
+package com.dreadblade.utils;
 
 /**
  * @author Dreadblade- (https://github.com/Dreadblade-dev)

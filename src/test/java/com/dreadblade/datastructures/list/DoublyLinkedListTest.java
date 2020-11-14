@@ -1,5 +1,6 @@
 package com.dreadblade.datastructures.list;
 
+import com.dreadblade.utils.NoSuchElementException;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
