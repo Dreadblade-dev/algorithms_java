@@ -21,7 +21,7 @@ import java.util.*;
  * ├────────────┼───────────┼──────────┼──────────┼──────────┤
  * │  Average:  │  O(log n) │ O(log n) │ O(log n) │ O(log n) │
  * ├────────────┼───────────┼──────────┤──────────┼──────────┤
- * │ Worst case:│    O(n)   │   O(1)   │   O(1)   │   O(n)   │
+ * │ Worst case:│    O(n)   │   O(n)   │   O(n)   │   O(n)   │
  * └────────────┴───────────┴──────────┴──────────┴──────────┘
  *
  * Source: https://en.wikipedia.org/wiki/Binary_search_tree
